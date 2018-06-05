@@ -1,10 +1,10 @@
 # Building a Discreet Log Contract Oracle in Go
 
-In 2017, [Tadge Dryja](https://twitter.com/tdryja) publishes a [paper](https://adiabat.github.io/dlc.pdf) about Discreet Log Contracts. 
+In 2017, [Tadge Dryja](https://twitter.com/tdryja) published a [paper](https://adiabat.github.io/dlc.pdf) on Discreet Log Contracts. 
 
 By creating a Discreet Log Contract, Alice can form a contract paying Bob some time in the future, based on preset conditions, without committing any details of those conditions to the blockchain. Therefore it is discreet in the sense that no external observer can learn its existence from the public ledger. This contract depends on an external entity or entities publishing a signed message at some point in the future (before the expiration of the contract). The contents of this signed message determine the division of the funds committed to the contract. This external entity is called an “oracle”. Using Discreet Log Contracts, the signature published by the oracle gives each participant of the contract the possibility to claim the amount from the contract that is due him without the need for cooperation from the other party. 
 
-This blog post will describe you how to build a Discreet Log Contract "oracle". This blog describes how to do this in Go, but you can also use [NodeJS](http://google.nl) or [.NET Core](https://google.nl)
+This tutorial will describe you how to build a Discreet Log Contract "oracle". This tutorial describes how to do this in Go, but you can also use [NodeJS](http://google.nl) or [.NET Core](https://google.nl)
 
 ### Set up a new project
 
