@@ -220,7 +220,8 @@ func main() {
 		// Generate random value between 10000 and 20000
 		randomValue := uint64(mathrand.Int31n(10000) + 10000)
 
-		// Generate message to sign. Uses the same encoding as expected by LIT when settling the contract
+		// Generate message to sign. Uses the same encoding as expected by LIT
+		// when settling the contract
 		message := dlcoracle.GenerateNumericMessage(randomValue)
 
 		// Sign the message
