@@ -10,7 +10,7 @@ This tutorial will describe you how to build a Discreet Log Contract "oracle". T
 
 Firstly, set up a new empty project and include the correct libraries. We start by creating the project folder and add the main program file to it.
 
-```
+```bash
 mkdir $GOROOT/src/tutorial
 cd $GOROOT/src/tutorial
 touch $GOROOT/src/tutorial/tutorial.go
@@ -18,7 +18,7 @@ touch $GOROOT/src/tutorial/tutorial.go
 
 Next, open the file `tutorial.go` in your favorite editor, and add this to it:
 
-```
+```go
 package main
 
 import (
@@ -36,7 +36,7 @@ Next, we'll need to have a private key. This private key is used in conjunction 
 
 So we add this function to the `tutorial.go` file:
 
-```
+```go
 func getOrCreateKey() ([32]byte, error) {
 	// Initialize the byte array that will hold the generated key
 	var priv [32]byte
@@ -91,7 +91,7 @@ func getOrCreateKey() ([32]byte, error) {
 
 and then we adjust the `main()` function to use it, and add the necessary imports:
 
-```
+```go
 package main
 
 import (
@@ -114,7 +114,7 @@ func main() {
 
 Next, we'll use the DLC library to generate the public key from the private key and print it out to the console:
 
-```
+```go
 (...)
 
 import (
@@ -135,7 +135,7 @@ func main() {
 
 In your terminal window, compile the application and run it:
 
-```
+```bash
 go build .
 ./tutorial
 ```
@@ -166,7 +166,7 @@ One last note on the one-time signing key: The reason that it's named this, is t
 
 OK, back to the code. So, first we add the generation of the one-time signing key and printing out the corresponding public key (R Point) to the loop.
 
-```
+```go
 (...)
 import (
     (...)
@@ -204,7 +204,7 @@ If you let the program run, after a minute it will print out another R-Point.
 
 Next step is to actually generate a random value and sign it. Using the DLC library, this is quite easy:
 
-```
+```go
 (...)
 import (
     (...)
