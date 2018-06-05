@@ -59,7 +59,8 @@ func getOrCreateKey() ([32]byte, error) {
 				return priv, err
 			}
 		} else {
-			// Some other error occurred while checking the file's existence, return the error
+			// Some other error occurred while checking the file's
+			// existence, return the error
 			return priv, err
 		}
 	}
